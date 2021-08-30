@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html" 
+	xmlns:th="http://thymeleaf.org"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+<h:head>
+	<title>Index</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"/>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+	
+	<!-- STYLE -->
+	<style>
+		
+		h3 {
+			text-align :  center ;
+		}
+	</style>
+	
+</h:head>
+
+<body>
+	
+	<div class="container">
+		<nav class="navbar navbar-light bg-light">
+		  <div class="container-fluid">
+		    <a class="navbar-brand">Navbar</a>
+			    <form class="d-flex">
+			    <p:messages id="messages" />
+			      <!-- Button trigger modal -->
+				  	<button type="button" class="btn btn-primary" data-bs-toggle="modal" 
+				  	data-bs-target="#exampleModal">Login</button>
+				  	
+				  	<!-- Modal -->
+					<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" 
+						 aria-hidden="true">
+					  <div class="modal-dialog">
+					    <div class="modal-content"> 
+					    	<div class="container">
+							  <div class="box">
+								 <div class="Small shadow p-3 mb-5 bg-light rounded center">
+								  	<h3> Login</h3>
+								  	<div class="form-floating mb-3">
+										<input type="email" class="form-control" id="nomeUsuario" placeholder="name@example.com"/>
+										
+										    <p:inputText id="nomeUsuario" value="#{LoginMB.usuario.nomeUsuario}" />
+										
+										<label for="floatingInput">Email address</label>
+									</div>
+										<div class="form-floating">
+											<input type="password" class="form-control" id="floatingPassword" placeholder="Password"/>
+										 	<label for="floatingPassword">Password</label>
+										</div>
+									 </div>
+								</div>
+							</div>
+						    	<div class="modal-footer">
+						    		<button type="submit" formaction="/home.xhtml"  class="btn btn-primary">Acessar</button>
+									<button type="submit" formaction="/cadLogin.xhtml" class="btn btn-secondary">Cadastrar</button>
+							        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+							        
+							    </div>	
+					    </div>
+					  </div>
+					</div>
+					
+					
+					
+				</form>
+  			</div>
+		</nav>
+	
+	</div>
+
+</body>
+</html>
